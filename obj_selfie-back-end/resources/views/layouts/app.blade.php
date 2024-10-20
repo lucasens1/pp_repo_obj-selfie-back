@@ -18,15 +18,15 @@
 
 <body>
     <nav class="bg-slate-500">
-        <ul class="flex justify-evenly px-6 py-4 text-white">
-            <li><a href="#">Tutti i messaggi</a></li>
+        <ul class="flex justify-center gap-6 p-4 text-white">
+            <li><a href="#">Messaggi</a></li>
             <li><a href="#">Da Leggere</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
 
 
     </nav>
-    <main class="flex">
+    <main class="flex max-sm:flex-col">
         @yield('content')
     </main>
 </body>
