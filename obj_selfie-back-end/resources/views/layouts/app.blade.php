@@ -14,23 +14,18 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
+    <body class="">
+        <div class="bg-slate-500">
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat esse, qui ducimus quidem commodi sequi consectetur autem eum numquam, optio dolore! Officia, et accusamus impedit voluptatum ipsam alias minima aliquam.
+           Commodi quae velit, expedita voluptas optio doloribus non quas alias ipsum facilis et exercitationem inventore consequatur at eos modi officia ex in esse qui magnam? Nihil deleniti sit facere fugiat.
+           Laudantium harum eaque nulla, illum possimus animi soluta quidem doloremque tenetur dolores earum, numquam velit quos, voluptates magni. Accusamus cumque nobis praesentium aspernatur, labore voluptatem illum facere vero quidem nostrum.
+           Architecto quas id aliquam in, vitae ipsam inventore, soluta tenetur ea quod placeat quisquam veniam? Atque pariatur earum aliquid nam? Tenetur eligendi ex, provident molestias eveniet doloremque officia. Cupiditate, delectus?
+           Dolore aut officiis maiores repudiandae dolores eum? Minima quo placeat suscipit similique animi. Quod commodi repellat ad quidem cupiditate modi saepe dolore doloribus repudiandae voluptas esse, illo vero, rerum tenetur?
+           Vel laudantium voluptatem a eligendi quibusdam voluptate veniam voluptas. Doloribus deserunt recusandae perspiciatis tempora debitis minus in, dolor eveniet quae consequatur quo vero similique aspernatur, voluptatum enim officiis magni quod?
+            
+           @yield('content')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+           
         </div>
     </body>
 </html>
