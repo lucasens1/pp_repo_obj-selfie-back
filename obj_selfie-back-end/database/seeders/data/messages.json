@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Mario Rossi",
+        "email": "mario.rossi@example.com",
+        "message": "Salve, vorrei chiedere informazioni sui vostri servizi di animazione per bambini.",
+        "read": false
+    },
+    {
+        "name": "Luca Bianchi",
+        "email": "luca.bianchi@example.com",
+        "message": "Buongiorno, avete disponibilità per un evento aziendale?",
+        "read": false
+    },
+    {
+        "name": "Sara Verdi",
+        "email": "sara.verdi@example.com",
+        "message": "Vorrei sapere se offrite pacchetti per matrimoni.",
+        "read": true
+    }
+]
