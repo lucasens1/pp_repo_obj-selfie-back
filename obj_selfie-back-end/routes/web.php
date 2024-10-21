@@ -16,15 +16,19 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+/* User atterra -> subito redirect a login */
+Route::get('/', function () {
+    return redirect()->route('login'); // Reindirizza alla rotta con name('login') 
+});
 
-Route::get('/', [AuthenticatedSessionController::class, 'create']);
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
 
 Route::middleware('auth')
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('messages', MessageController::class);
-});
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+        Route::resource('messages', MessageController::class);
+    });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

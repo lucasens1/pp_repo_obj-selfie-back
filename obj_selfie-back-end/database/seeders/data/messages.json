@@ -3,18 +3,48 @@
         "name": "Mario Rossi",
         "email": "mario.rossi@example.com",
         "message": "Salve, vorrei chiedere informazioni sui vostri servizi di animazione per bambini.",
-        "read": false
+        "read": false,
+        "phone": "1234567890",
+        "subject": "Informazioni servizi"
     },
     {
         "name": "Luca Bianchi",
         "email": "luca.bianchi@example.com",
         "message": "Buongiorno, avete disponibilità per un evento aziendale?",
-        "read": false
+        "read": false,
+        "phone": "0987654321",
+        "subject": "Disponibilità evento"
     },
     {
         "name": "Sara Verdi",
         "email": "sara.verdi@example.com",
         "message": "Vorrei sapere se offrite pacchetti per matrimoni.",
-        "read": true
+        "read": true,
+        "phone": "4561237890",
+        "subject": "Pacchetti matrimoni"
+    },
+    {
+        "name": "Marco Neri",
+        "email": "marco.neri@example.com",
+        "message": "Quali sono i vostri prezzi per le feste di compleanno?",
+        "read": false,
+        "phone": "3216549870",
+        "subject": "Prezzi feste di compleanno"
+    },
+    {
+        "name": "Giulia Rossa",
+        "email": "giulia.rossa@example.com",
+        "message": "Offrite servizi di animazione anche per eventi privati?",
+        "read": false,
+        "phone": "7893216540",
+        "subject": "Servizi eventi privati"
+    },
+    {
+        "name": "Alessandro Gialli",
+        "email": "alessandro.gialli@example.com",
+        "message": "Ho bisogno di informazioni per una festa a tema.",
+        "read": false,
+        "phone": "6541237890",
+        "subject": "Informazioni festa a tema"
     }
 ]

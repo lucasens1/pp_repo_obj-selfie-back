@@ -10,6 +10,8 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Oggetto</th>
                     <th>Messaggio</th>
                     <th>Letto?</th>
                 </tr>
@@ -21,7 +23,9 @@
                         <td> {{ $item->id }}</td>
                         <td> {{ $item->name }}</td>
                         <td> {{ $item->email }}</td>
+                        <td> telefono </td>
                         <td> {{ $item->message }}</td>
+                        <td> Oggetto Messaggio</td>
                         <td> {{ $item->read ? 'si' : 'no'}} </td>
                     </tr>
                 @endforeach
