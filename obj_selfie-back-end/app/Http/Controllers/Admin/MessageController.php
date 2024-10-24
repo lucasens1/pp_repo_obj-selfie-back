@@ -13,15 +13,17 @@ class MessageController extends Controller
         return view('admin.messages.index', compact('messages'));
     }
 
-    public function create(Request $request){
+    public function store(Request $request){
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
+            'phone' => 'string|max:15',
             'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
             'message' => 'required|string'
         ]);
-
+    
         $message = Message::create($validatedData);
-
+    
         return response()->json(['message' => 'Messaggio creato con successo', 'data' => $message], 201);
     }
 

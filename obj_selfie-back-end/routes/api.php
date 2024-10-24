@@ -20,7 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/messages', [MessageController::class, 'index']); // Mostra tutti i messaggi
-Route::post('/messages', [MessageController::class, 'create']); // Crea un nuovo messaggio
-Route::put('/messages/{id}', [MessageController::class, 'update']); // Aggiorna un messaggio
-Route::delete('/messages/{id}', [MessageController::class, 'delete']); // Cancella un messaggio
+Route::post('/messages', [MessageController::class, 'store']); // Utente crea nuovo messaggio
