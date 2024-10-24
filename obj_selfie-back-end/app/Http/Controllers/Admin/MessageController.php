@@ -27,8 +27,15 @@ class MessageController extends Controller
         return response()->json(['message' => 'Messaggio creato con successo', 'data' => $message], 201);
     }
 
+    public function show($id){
+        $message = Message::findOrFail($id);
+        /* Segno che è stato letto */
+        $message->markAsRead();
+        return view('admin.messages.show', compact('message'));
+    }
+
     // DELETE: Cancella un messaggio
-    public function delete($id)
+    public function destroy($id)
     {
         // Trova il messaggio da cancellare
         $message = Message::findOrFail($id);
@@ -36,6 +43,7 @@ class MessageController extends Controller
         // Cancella il messaggio
         $message->delete();
 
-        return response()->json(['message' => 'Messaggio cancellato con successo!']);
+        return redirect()->route('admin.messages.index')->with('success', 'Messaggio cancellato con successo!');
+
     }
 }
