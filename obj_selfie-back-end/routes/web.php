@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\MailTestController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,8 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
+
+Route::get('/send-test-email', [MailTestController::class, 'sendTestEmail']);
 
 Route::middleware('auth')
     ->prefix('admin')

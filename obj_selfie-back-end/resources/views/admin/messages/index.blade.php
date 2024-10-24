@@ -30,7 +30,7 @@
                         {{-- <td> {{ $item->phone}} </td> --}}
                         <td> {{ $item->subject}}</td>
                         {{-- <td> {{ $item->message }}</td> --}}
-                        <td> {{ $item->read ? '✔' : '✘'}} </td>
+                        <td> <span class="bg-red-500 text-white rounded-3xl p-2 block">{{ $item->read ? '✔' : '✘'}}</span> </td>
                         <td> <a href="{{route('admin.messages.show', $item->id)}}" class="bg-transparent hover:bg-blue-500 text-black font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent hover:transition rounded-xl transition">Dettagli</a></td>
                     </tr>
                 @endforeach
