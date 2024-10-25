@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-full text-center">
-        <h1 class="text-2xl mb-12 font-semibold">Messaggi!</h1>
+        <h1 class="text-2xl mb-6 font-semibold">Messaggi!</h1>
         @if (session('success'))
             <div class="border-1 border-green-500 text-green-600 my-6 p-2">
                 {{ session('success') }}
@@ -23,9 +23,9 @@
         </div>
 
         {{-- Container Messaggi --}}
-        <div class="flex max-sm:w-full flex-wrap justify-center gap-4" id="messageContainer">
+        <div class="flex max-sm:w-full flex-wrap justify-center gap-4 mb-6" id="messageContainer">
             @foreach ($messages as $message)
-                <div class="max-w-sm rounded-2xl overflow-hidden shadow-2xl ms_card_size p-4 {{ $message->read ? 'bg-slate-700 text-white' : '' }}"
+                <div class="max-w-sm rounded-2xl overflow-hidden shadow-2xl ms_card_size p-4 {{ $message->read ? 'bg-slate-700 text-white' : 'border border-orange-600' }}"
                     data-status="{{ $message->read ? 'read' : 'toread' }}">
                     <div class="px-3">
                         <div class="font-bold text-xl mb-2">{{ $message->subject }}</div>
