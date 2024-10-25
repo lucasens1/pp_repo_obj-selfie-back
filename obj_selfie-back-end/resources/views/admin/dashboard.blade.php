@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- Welcome Back --}}
-    <div class="border border-1 w-1/2 max-sm:w-full p-4">
+    <div class="w-1/2 max-sm:w-full p-4 text-center text-xl">
         {{-- @if (session('status'))
             <div class="" role="alert">
                 {{ session('status') }}
@@ -11,12 +11,9 @@
         @php
             $username = ucfirst(strtolower(Auth::user()->name));
         @endphp
-        <h1>Benvenuto <strong>{{ $username }}</strong>!</h1>
-        <h2>Cosa vuoi fare?</h2>
+        <h1>Benvenuto <strong class="text-2xl">{{ $username }}  {{ $username === 'Flaminus' ? '🦅' : ''}} </strong>!</h1>
     </div>
-    <div class="border border-1 w-1/2 max-sm:w-full p-4">
-        <p class="text-center">Vediamo quanti messaggi hai ricevuto : <strong>{{ $messages->count() }}</strong>
-            {{-- Inserimento dati dinamici dei messaggi ricevuti --}}</p>
+    <div class="w-1/2 max-sm:w-full p-6 rounded-lg text-center bg-slate-700 text-white">
         @php
             $to_read_count = 0;
             foreach ($messages as $item) {
@@ -32,16 +29,9 @@
             letto!
         @endif
     @else
-        <p class="mt-4">Non hai nessun messaggio non letto !</p>
+        <p class="mt-4 text-lg mb-4">Non hai nessun messaggio non letto !</p>
         @endif
         @php
-            /* $last_month_msg = 0;
-                $curMonth = date('m');
-                for($i = 0; $i < $messages->count() - 1; $i++){
-                    $formattedMonth = $messages[$i]->created_at->format('m');
-                    $curMonth === $formattedMonth ? $last_month_msg++ : continue;
-                } */
-            /* Versione ottimizzata */
             $current_month = now()->format('m');
             $last_month_msgs = $messages
                 ->filter(function ($message) use ($current_month) {
@@ -49,7 +39,7 @@
                 })
                 ->count();
         @endphp
-        <p>Nell'ultimo mese ti hanno contatta : {{ $last_month_msgs }} volte!{{-- Inserimento dinamico di messaggi ricevuti nell'ultimo mese Mese Corrente - Inizio Mese per il calcolo --}}</p>
+        <p>Nell'ultimo mese ti hanno contattato : {{ $last_month_msgs }} volte!{{-- Inserimento dinamico di messaggi ricevuti nell'ultimo mese Mese Corrente - Inizio Mese per il calcolo --}}</p>
     </div>
     {{-- / Welcome --}}
 @endsection

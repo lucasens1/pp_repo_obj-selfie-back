@@ -21,7 +21,7 @@
     @php
         $currentPath = request()->path();
     @endphp
-    <nav class="bg-slate-500">
+    <nav class="bg-slate-700">
         <ul class="flex justify-center items-center gap-6 p-4 text-white">
             <li><a href="{{ route('admin.dashboard') }}"
                     class="{{ $currentPath === 'admin' ? 'italic' : 'opacity-50' }} hover:underline underline-offset-8">Dashboard</a>
